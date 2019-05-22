@@ -1,0 +1,45 @@
+.main_top_container {
+	
+}
+
+.main_top_img {
+	background : url('/img/main_background.jpg') no-repeat;
+	background-size : cover;
+	height : 550px;
+}
+
+.img_inner {
+	padding-top : 220px;
+	margin : 0 auto;
+	width : 1092px;
+}
+
+.search_area {
+	background : #363c48;
+	margin : 0 auto;
+	padding : 15px;
+	width : 640px;
+}
+
+.search_input{
+	width:100%;
+	height:50px;
+	padding-left:15px;
+	border:none;
+	font-size:20px;
+	color:#b3b3b3;
+	margin-bottom:10px;
+}
+
+.commnunity_table {
+	margin : 0 auto;
+	clear : both;
+	table-layout : fixed;
+	width : 100%;
+}
+
+.commnunity_table table tr { background : #ff0000; font-size : 20px;}
+/*
+.commnunity_table table tr { border-top:1px solid #ddd; background : #ff0000; }
+.commnunity_table table th{height:40px;font-size:14px;color:#232323;font-weight:normal;text-align:center;vertical-align:middle;border:1px solid #ddd;border-width:1px 0;}
+*/

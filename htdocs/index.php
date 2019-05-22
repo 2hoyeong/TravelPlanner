@@ -1,22 +1,16 @@
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
-<html>
-<head>
-<title> APMSETUP </title>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-<link rel="stylesheet" type="text/css" href="/css/reset.css">
-<link rel="stylesheet" type="text/css" href="/css/default.css">
-</head>
-<body>
 <?php
 include("./header.php");
 ?>
-<div id="wrap">
-
-
-
-
+	<div class="main_top_container">
+		<div class="main_top_img"> 
+			<div class="img_inner">
+				<div class="search_area">
+					<input class="search_input" id="city_search" placeholder="국가명, 도시명으로 검색">
+					<div class="clear"></div>
+				</div>
+			</div>
+		</div>
+	</div>
 <?php
 include("./footer.php");
 ?>
-</body>
-</html>

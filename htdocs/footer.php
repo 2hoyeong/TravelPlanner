@@ -1,3 +1,4 @@
+</div>
 <div id="footer">
 	<div class="footer_bottom">
 		<div class="wrap">
@@ -6,3 +7,5 @@
 		</div>
 	</div>
 </div>
+</body>
+</html>
