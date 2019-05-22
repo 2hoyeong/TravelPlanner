@@ -1,0 +1,97 @@
+#header {
+	width : 100%;
+	height : 64px;
+	border-top : solid #4eb1e4 2px;
+	position : relative;
+}
+
+.wrap {
+	width : 1092px;
+	margin : 0 auto;
+	position : relative;
+}
+
+.fl {
+	float : left;
+}
+
+.gnb {
+	height : 62px;
+	line-height : 62px;
+	font-family : nanum_b;
+	font-size : 16px;
+	font-weight : bold;
+}
+
+.gnb li { 
+	height : 62px;
+	margin-left : 5px;
+	padding : 0px 19px;
+	cursor : pointer;
+	float : left;
+}
+
+.gnb a {
+	color : #363636;
+	display : block;
+}
+
+.fr {
+	float : right;
+}
+
+.gnb_box {
+	height : 62px;
+	position : relative;
+}
+
+.logo {
+	width : 200px;
+}
+
+.gnb_login_btn {
+	width : 63px;
+	height : 29px;
+	line-height : 29px;
+	border : solid #f7870f 1px;
+	border-left : 0px;
+	margin-top : 17px;
+	text-align : center;
+	color : #fff;
+	cursor : pointer;
+	background : #ff9320;
+}
+
+.gnb_join_btn {
+	width : 63px;
+	height : 29px;
+	line-height : 29px;
+	border : solid #3099dd 1px;
+	border-left : 0px;
+	margin-top : 17px;
+	text-align : center;
+	color : #fff;
+	cursor : pointer;
+	background : #49b2e9;
+	margin-left : 5px;
+}
+
+
+/* foot.php */
+#footer {
+	width : 100%;
+	height : 80px;
+	background : #363c48;
+	position : relative;
+}
+
+.footer_bottom {
+	width : 100%;
+	height : 40px;
+	background : #2e333d;
+	color : #c9c9c9;
+	line-height : 40px;
+	position : absolute;
+	bottom : 0px;
+	font-size : 11px;
+}
