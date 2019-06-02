@@ -1,9 +1,3 @@
-<?php
-	session_start();
-	
-	include_once("_common.php");
-
-?>
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
 <html>
 <head>
@@ -14,10 +8,11 @@
 <link rel="stylesheet" type="text/css" href="/css/reset.css?v=<?=time();?>">
 <link rel="stylesheet" type="text/css" href="/css/default.css?v=<?=time();?>">
 <link rel="stylesheet" type="text/css" href="/css/main.css?v=<?=time();?>">
+<script type="text/javascript" src="/js/common.js"></script>
 
 <div id="header">
 	<div class="wrap">
-			<a href="/ko/"><img src="/img/logo.png" class="logo fl" alt="여행의 시작! 어스토리"></a>
+			<a href="/"><img src="/img/logo.png" class="logo fl" alt="여행의 시작! 어스토리"></a>
 								<ul class="gnb fl">
 			<a href="/ko/area" class="fl"><li>여행지</li></a>
 			<a href="/ko/plan" class="fl"><li>일정만들기</li></a>			

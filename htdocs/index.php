@@ -1,7 +1,7 @@
 <?php
 include("./header.php");
 ?>
-	<div class="main_top_container">
+	<div style="min-width:1092px;" class="main_top_container">
 		<div class="main_top_img"> 
 			<div class="img_inner">
 				<div class="search_area">

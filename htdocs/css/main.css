@@ -31,15 +31,97 @@
 	margin-bottom:10px;
 }
 
-.commnunity_table {
+.community_table {
 	margin : 0 auto;
 	clear : both;
 	table-layout : fixed;
+	width : 1092px;
+	font-size : 15px;
+}
+
+.community_table tr {border-top:1px solid #ddd; transition: background-color .3s;}
+.community_table tbody tr:hover{background-color: #ddd;}
+.community_table th{height:40px;font-size:14px;color:#232323;font-weight:normal;text-align:center;vertical-align:middle;border:1px solid #ddd;border-width:1px 0;}
+.community_table td { height : 30px; text-align : center; vertical-align:middle }
+.community_table td:nth-child(2) { text-align : left; } 
+
+.community_write_container {
+	width : 1092px;
+	margin : 0 auto;
+}
+
+.community_write_table {
+	clear : both;
+	table-layout : fixed;
+	font-weight : bold;
+	line-height : 4;
 	width : 100%;
 }
 
-.commnunity_table table tr { background : #ff0000; font-size : 20px;}
-/*
-.commnunity_table table tr { border-top:1px solid #ddd; background : #ff0000; }
-.commnunity_table table th{height:40px;font-size:14px;color:#232323;font-weight:normal;text-align:center;vertical-align:middle;border:1px solid #ddd;border-width:1px 0;}
-*/
+.btnWrap {
+	height : 50px;
+}
+
+.write_btn {
+	color : white;
+	font-size : 14px;
+	margin : 5px;
+	padding : 5px 15px;
+}
+
+.orange {
+	border : 1px solid #f7870f;
+	background : #ff9320;
+}
+
+.skyblue {
+	border : 1px solid #3099dd;
+	background : #49b2e9;
+}
+
+.gray {
+	border : 1px solid #585858;
+	background : #717171;
+}
+
+.bContent { 
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	width : 100%;
+	resize : none;
+}
+
+.pagination {
+	margin-top : 50px;
+	text-align : center;
+}
+
+.pagination li {
+	display : inline-block;
+}
+
+.pagination a {
+	color: black;
+	padding: 8px 16px;
+	text-decoration: none;
+	transition: background-color .3s;
+	border: 1px solid #ddd;
+}
+.pagination a:hover:not(.active) {background-color: #ddd;}
+
+.pagination li a.active {
+	font-weight : bold;
+	background : #ff9320;
+	color : white;
+}
+
+.pagination a:first-child {
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+}
+
+.pagination a:last-child {
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+}

@@ -1,5 +1,5 @@
 #header {
-	width : 100%;
+	min-width : 1092px;
 	height : 64px;
 	border-top : solid #4eb1e4 2px;
 	position : relative;
@@ -76,10 +76,24 @@
 	margin-left : 5px;
 }
 
+#body {
+	min-width : 1092px;
+	position : relative;
+}
+
+#body > div {
+	margin : 0 auto;
+	min-height : 550px;
+}
+
+#body > div:not(.main_top_container) {
+	width : 1092px;
+}
+
 
 /* foot.php */
 #footer {
-	width : 100%;
+	min-width : 1092px;
 	height : 80px;
 	background : #363c48;
 	position : relative;
