@@ -45,6 +45,10 @@
 .community_table td { height : 30px; text-align : center; vertical-align:middle }
 .community_table td:nth-child(2) { text-align : left; } 
 
+.community_table a:link {
+	color : black;
+}
+
 .community_write_container {
 	width : 1092px;
 	margin : 0 auto;
@@ -124,4 +128,10 @@
 .pagination a:last-child {
   border-top-right-radius: 5px;
   border-bottom-right-radius: 5px;
+}
+
+.board_title {
+	font-weight : bold;
+	font-size : 18px;
+	margin : 15px 0;
 }

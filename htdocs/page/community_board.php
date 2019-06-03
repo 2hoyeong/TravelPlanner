@@ -25,6 +25,9 @@ if ($pageNum <= $e_page) {
 ?>
 
 <div class="community_container">
+	<div class="board_title">
+		자유게시판
+	</div>
 	<div class="community_table_wrap">
 		<table class="community_table">
 			<thead>

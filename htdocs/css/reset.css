@@ -46,10 +46,6 @@ a, a:hover{
 	text-decoration:none;
 }
 
-a:link {
-	color : black;
-}
-
 body, html{
 	margin:0;
 	padding:0;

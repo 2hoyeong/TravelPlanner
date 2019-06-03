@@ -56,7 +56,8 @@ function sqlSelect($sql)
 	return false;
 }
 
-function alert($msg='', $url='') {
+function alert($msg='', $url='') 
+{
 	echo "<script>";
 	if($msg) {
 		echo "alert('{$msg}');";
@@ -66,6 +67,17 @@ function alert($msg='', $url='') {
 	}
 	
 	echo "</script>";
+}
+
+function getPostById($id) 
+{
+	$sql = "SELECT * FROM `post` WHERE `PostID` = {$id}";
+	$post = sqlSelect($sql);
+	if($post) {
+		return $post->fetch_assoc();
+	} else {
+		return false;
+	}
 }
 
 ?>
