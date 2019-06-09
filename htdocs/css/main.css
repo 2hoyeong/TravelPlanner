@@ -6,6 +6,7 @@
 	background : url('/img/main_background.jpg') no-repeat;
 	background-size : cover;
 	height : 550px;
+	margin-top : -30px;
 }
 
 .img_inner {
@@ -35,7 +36,7 @@
 	margin : 0 auto;
 	clear : both;
 	table-layout : fixed;
-	width : 1092px;
+	width : 887px;
 	font-size : 15px;
 }
 
@@ -128,6 +129,38 @@
 .pagination a:last-child {
   border-top-right-radius: 5px;
   border-bottom-right-radius: 5px;
+}
+
+.community_sidemenu {
+	width : 190px;
+	margin-top : 45px;
+	margin-right : 10px;
+}
+
+.community_table_wrap {
+	display : inline-block;
+}
+
+.community_sidemenu ul {
+	text-align : center;
+}
+
+.community_sidemenu ul > div {
+	font-size : 16px;
+	font-weight : bold;
+	padding : 14px 0;
+	border-top : 1px solid #eeeeee;
+	border-bottom : 1px solid #eeeeee;
+	color : white;
+}
+
+.community_sidemenu a:link {
+	color : black;
+}
+
+.community_sidemenu li {
+	border-top : 1px solid #eeeeee;
+	padding : 12px 0;
 }
 
 .board_title {

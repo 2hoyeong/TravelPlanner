@@ -66,3 +66,7 @@ html{
 div, input, label, a, select, ul, li{
 	box-sizing:border-box;
 }
+
+a:link, a:visited {
+	color : inherit;
+}

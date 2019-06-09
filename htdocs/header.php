@@ -17,14 +17,21 @@
 			<a href="/ko/area" class="fl"><li>여행지</li></a>
 			<a href="/ko/plan" class="fl"><li>일정만들기</li></a>			
 			<a href="/bbs/community.php" class="fl"><li>커뮤니티</li></a>			
-			<a href="https://www.agoda.com/?cid=1607809" class="fl" target="_blank"><li>호텔</li></a>
+			<a href="https://www.trivago.co.kr/" class="fl" target="_blank"><li>숙소</li></a>
 			<a href="/ko/intro" class="fl"><li>이용방법</li></a>	
 		</ul>
 
 		<div class="fr gnb_box">
-			<a href="javascript:void(0)" class="fr" onclick="et_modal('365px','499px','1','0','/ko/member/join','2','1')"><div class="fl gnb_join_btn">회원가입</div></a>
-			<a href="javascript:void(0)" class="fr" onclick="et_modal('365px','380px','1','0','/ko/member','2','1')"><div class="fl gnb_login_btn">로그인</div></a>
-			<div class="clear"></div>
+			<?php 
+				if(!isset($_SESSION['id'])) { ?>
+			<a href="/bbs/register.php" class="fr"><div class="fl gnb_join_btn">회원가입</div></a>
+			<a href="/bbs/login.php" class="fr"><div class="fl gnb_login_btn">로그인</div></a>
+			<?php 
+				} else {
+			?>
+			<a href="/bbs/logout.php" class="fr"><div class="fl gnb_login_btn">로그아웃</div></a>
+			<?php }
+			?>
 
 		</div>
 		<div class="clear"></div>

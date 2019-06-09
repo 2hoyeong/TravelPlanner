@@ -1,5 +1,6 @@
 <?php
-include("./header.php");
+include("common.php");
+include("header.php");
 ?>
 	<div style="min-width:1092px;" class="main_top_container">
 		<div class="main_top_img"> 
@@ -12,5 +13,5 @@ include("./header.php");
 		</div>
 	</div>
 <?php
-include("./footer.php");
+include("footer.php");
 ?>

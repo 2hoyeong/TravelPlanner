@@ -23,12 +23,18 @@ if ($pageNum <= $e_page) {
 	$e_page = $pageNum;
 }
 ?>
-
 <div class="community_container">
-	<div class="board_title">
-		자유게시판
+	<div class="community_sidemenu fl">
+		<ul>
+			<div class="orange">커뮤니티</div>
+			<a href="javascript:addOrUpdateUrlParam(window.location.href, 'board_title', 'freeboard');"><li>자유게시판</li></a>
+			<a href="javascript:addOrUpdateUrlParam(window.location.href, 'board_title', 'qna');"><li>Q&amp;A</li></a>
+		</ul>
 	</div>
 	<div class="community_table_wrap">
+		<div class="board_title">
+			<?php echo $board_title;?>
+		</div>
 		<table class="community_table">
 			<thead>
 				<tr>
@@ -41,9 +47,10 @@ if ($pageNum <= $e_page) {
 			<tbody>
 				<?php
 					$s_point = ($page-1) * $view;
-					$real_data = sqlSelect('SELECT * FROM `post` where boardID = 1 ORDER BY `PostID` DESC LIMIT '.$s_point.','.$view);
-					
+					$real_data = sqlSelect('SELECT * FROM `post` where boardID = '.$board_code.' ORDER BY `PostID` DESC LIMIT '.$s_point.','.$view);
 					for ($i=1; $i<=$num; $i++) {
+						if(!$real_data) break;
+						
 						$fetch = $real_data->fetch_assoc();
 						if ($fetch == false) {
 							break;
@@ -77,7 +84,7 @@ if ($pageNum <= $e_page) {
            </ul>
        </div>
 		<div class="btnWrap">
-			<a href="/bbs/write_board.php" class="write_btn gray fr">글쓰기</a>
+			<a href="/bbs/write_board.php?bc=<?=$board_code?>"><div class="write_btn gray fr">글쓰기</div></a>
 		</div>
     </div>
 </div>

@@ -129,7 +129,7 @@
 		<!-- //replyArea -->
 		<!-- viewBtn -->
 		<div class="viewBtn">
-				<a href="javascript:history.back();" class="fr write_btn skyblue">목록</a>
+				<a href="javascript:history.back();"><div class="fr write_btn skyblue">목록</a>
 			</div>
 		</div>
 		<!-- //viewBtn -->
