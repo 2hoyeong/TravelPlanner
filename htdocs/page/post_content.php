@@ -102,27 +102,17 @@
 		<!-- //viewSns -->
 				<!-- replyArea -->
 		<div class="replyArea" id="replyArea"><!-- replyStatus -->
+		<!--
 <div class="replyStatus">
 	<p>댓글 <i id="commentCnt" data-value="0">0</i></p>
-	<span class="vBlank"><!-- for ui --></span>
-</div>
+	<span class="vBlank"></span>
+</div>-->
 <!-- //replyStatus -->
 
-<!-- replyList -->
-<ul class="replyList" id="replyList">
-	<li class="comment_list blank" style="width:0px;height:0px;border:0px;padding:0px;"></li>
-
-	<form name="commentForm" id="commentForm" method="post" action="/ap/tboard/comment_proc/?mode=write" onsubmit="return false;">
-	<input type="hidden" name="aid" value="188156">
-	<input type="hidden" name="bid" value="1">
-	<li class="commentForm">
-		<div class="commentFormArea">
-			<textarea cols="30" rows="4" name="content" placeholder="로그인 하신 후 댓글을 입력할 수 있습니다."></textarea>
-			<button type="button" title="등록" class="regist" data="write" id="comment_write">등록</button>
-		</div>
-	</li>
-	</form>
-</ul>
+<!-- replyList -->	
+<?php
+	include(ROOTDIR."/comment/reply.php");
+?>
 <!-- //replyList -->
 <!-- //replyList -->
 </div>
