@@ -1,14 +1,4 @@
-﻿* {
-  margin: 0px;
-  padding: 0px;
-}
-
-body {
-  font-size: 120%;
-  background: #f8f8f8;
-}
-
-.header {
+﻿.header {
   width: 30%;
   margin: 50px auto 0px;
   color: white;
