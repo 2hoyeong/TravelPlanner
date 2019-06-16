@@ -25,5 +25,10 @@
 		<p>
 			회원이 아니세요? <a href="register.php">회원가입</a>
 		</p>
+		&nbsp;
+		<p>
+			<a href="../login/forgot_id.php">아이디 찾기</a>&nbsp;&nbsp;&nbsp;&nbsp;
+			<a href="../login/forgot_pw.php">패스워드 찾기</a>
+		</p>
 	</form>
 </div> 

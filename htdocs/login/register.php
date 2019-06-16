@@ -4,7 +4,7 @@ include('server.php');
 <link rel="stylesheet" type="text/css" href="/css/style.css?v=<?=time();?>">
 <div>
 	<div class="header">
-		<h2>Regisdter</h2>
+		<h2>Register</h2>
 	</div>
 
 	<form method="post" action="register.php">

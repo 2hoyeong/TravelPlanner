@@ -52,10 +52,11 @@
         }
 
         if (count($errors) == 0) {
-            //$password = md5($password);
+            $password = md5($password);
             $query = "SELECT * FROM accounts WHERE id='$id' AND password='$password'";
-            $result = sqlSelect($query);
-			if($result) {
+            $result = mysqli_query($db_conn, $query);
+            //$result = sqlSelect($query);
+			if(mysqli_num_rows($result) == 1) {
                 $_SESSION['id'] = $id;
                 $_SESSION['success'] = "You are now logged in";
                 header('location: /index.php');
