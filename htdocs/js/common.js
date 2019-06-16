@@ -24,3 +24,32 @@ function addOrUpdateUrlParam(uri, key, value)
 	//return uri + hash;
 	window.location.href = uri + hash;
 }
+
+var setCookie = function(name, value, exp) {
+	var date = new Date();
+	date.setTime(date.getTime() + exp*24*60*60*1000);
+	document.cookie = name + '=' + value + ';expires=' + date.toUTCString() + ';path=/';
+};
+
+var getCookie = function(name) {
+	var value = document.cookie.match('(^|;) ?' + name + '=([^;]*)(;|$)');
+	return value? value[2] : null;
+};
+
+var getCookieSplited = function(name) {
+	var value = document.cookie.match('(^|;) ?' + name + '=([^;]*)(;|$)');
+	return value? value[2].split("&") : null;
+}
+
+var addCookie = function(name, value) {
+	var cookie = getCookie(name);
+	if (cookie != 0)
+		setCookie(name, cookie + "&" + value , 5); 
+	else
+		setCookie(name, value, 5);
+};
+
+var addPlan = function(type, code) {
+	addCookie("plan", "["+ type + "," +  code + "]");
+	alert("일정에 추가되었습니다.");
+};

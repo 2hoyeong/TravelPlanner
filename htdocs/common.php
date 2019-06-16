@@ -80,4 +80,132 @@ function getPostById($id)
 	}
 }
 
+function getContinentList()
+{
+	global $db_conn;
+	$list = array();
+	$sql = "select * from `place_continent`";
+	$sqlresult = sqlSelect($sql);
+	if($sqlresult) {
+		while(($row = $sqlresult->fetch_assoc())) {
+			$list[$row['ContinentID']] = $row['ContinentName'];
+		}
+	}
+	return $list;
+}
+
+function getCountryList()
+{
+	global $db_conn;
+	$list = array();
+	$sql = "select * from `place_country`";
+	$sqlresult = sqlSelect($sql);
+	if($sqlresult) {
+		while(($row = $sqlresult->fetch_assoc())) {
+			$list[$row['CountryID']] = $row['ContinentID'].",".$row['CountryName'];
+		}
+	}
+	return $list;
+}
+
+function getCityList()
+{
+	global $db_conn;
+	$list = array();
+	$sql = "select * from `place_city`";
+	$sqlresult = sqlSelect($sql);
+	if($sqlresult) {
+		while(($row = $sqlresult->fetch_assoc())) {
+			$list[$row['CityID']] = $row['CountryID'].",".$row['CityName'];
+		}
+	}
+	return $list;
+}
+
+function getCityId($attractionid) {
+	$cityid = sqlSelect("Select `CityID` from `place_attraction` where `AttractionID` = {$attractionid}");
+	$cityid = $cityid->fetch_assoc()['CityID'];
+	
+	return $cityid;
+}
+
+function getCountryId($cityid) {
+	$countryid = sqlSelect("Select `CountryID` from `place_city` where `CityID` = {$cityid};");
+	$countryid = $countryid->fetch_assoc()['CountryID'];
+	
+	return $countryid;
+}
+
+function getContinentId($countryid) {
+	$continentid = sqlSelect("Select `ContinentID` from `place_country` where `CountryID` = {$countryid};");
+	$continentid = $continentid->fetch_assoc()['ContinentID'];
+	
+	return $continentid;
+}
+
+function getAttractionList()
+{
+	global $db_conn;
+	$list = array();
+	$sql = "select * from `place_attraction`";
+	$sqlresult = sqlSelect($sql);
+	if($sqlresult) {
+		while(($row = $sqlresult->fetch_assoc())) {
+			$list[$row['AttractionID']] = $row['CityID'].",".$row['AttractionName'];
+		}
+	}
+	return $list;
+}
+
+function getCityById($cityid) {
+	return sqlSelect("Select * from `place_city` where `cityid` = {$cityid}")->fetch_assoc();
+}
+
+function getAttractionById($attractionid) {
+	return sqlSelect("Select * from `place_attraction` where `AttractionID` = {$attractionid}")->fetch_assoc();
+}
+
+function getCityImageURLs($cityid) {
+	
+	$result = array();
+	
+	$countryid = getCountryId($cityid);
+	$continentid = getContinentId($countryid);
+	
+	$url = ROOTDIR."/img/area/{$continentid}/{$countryid}/{$cityid}/";
+	$rurl = ROOTPATH."/img/area/{$continentid}/{$countryid}/{$cityid}/";
+	
+	if (!is_dir($url))
+		return false;
+
+	
+	foreach(glob($url . '*.jpg') as $filename) {
+		array_push($result, $rurl.basename($filename));
+	}
+	
+	return $result;
+}
+
+function getAttractionImageURLs($attractionid) {
+	
+	$result = array();
+	
+	$cityid = getCityId($attractionid);
+	$countryid = getCountryId($cityid);
+	$continentid = getContinentId($countryid);
+	
+	$url = ROOTDIR."/img/area/{$continentid}/{$countryid}/{$cityid}/{$attractionid}/";
+	$rurl = ROOTPATH."/img/area/{$continentid}/{$countryid}/{$cityid}/{$attractionid}/";
+	
+	if (!is_dir($url))
+		return false;
+
+	
+	foreach(glob($url . '*.jpg') as $filename) {
+		array_push($result, $rurl.basename($filename));
+	}
+	
+	return $result;
+}
+
 ?>
